@@ -15,6 +15,20 @@
 </head>
 
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top bg-dark">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.php">Minha Loja</a>
+        </div>
+        <div>
+            <ul class="navbar-nav">
+                <li><a href="produto-formulario.php">Adiciona Produto</a></li>
+                <li><a href="sobre.php">Sobre</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
     <div class="container">
 
         <div class="principal">

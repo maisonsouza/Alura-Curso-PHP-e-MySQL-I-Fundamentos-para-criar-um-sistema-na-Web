@@ -10,10 +10,19 @@ include ("cabecalho.php"); ?>
 <h1> Formulário de cadastro </h1>
 
 <form action="adiciona-produto.php">
-    Produto: <input name="nome_produto">
-    Preço: <input type="number" name="preco_produto">
-    <input class="btn" type="submit" value="Cadastrar"/>
-
+    <table class="table">
+        <tr>
+            <td>Produto:</td>
+            <td><input name="nome_produto" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Preço:</td>
+            <td><input type="number" name="preco_produto" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><input class="btn btn-primary" type="submit" value="Cadastrar"/></td>
+        </tr>
+    </table>
 </form>
 
 <?php include ("rodape.php"); ?>
