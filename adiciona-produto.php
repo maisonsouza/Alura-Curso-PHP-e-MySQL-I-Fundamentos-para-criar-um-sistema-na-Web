@@ -7,8 +7,16 @@
  */
 ?>
 
-<?php include ("cabecalho.php");
+<?php include("cabecalho.php"); ?>
+<?php
 $nome_produto = $_GET["nome_produto"];
-$preco_produto = $_GET["preco_produto"];?>
-<p class="alert-success">Produto <?=$nome_produto?> no valor de <?=$preco_produto?> reais adicionado com sucesso</p>
-<?php include ("rodape.php");
+$preco_produto = $_GET["preco_produto"];
+$conexao = mysqli_connect('localhost', 'root', '', 'loja');
+$query = "insert into produtos (nome,preco) values ('{$nome_produto}',{$preco_produto})";
+if(mysqli_query($conexao, $query)) {?>
+    <p class="alert-success">Produto <?= $nome_produto ?> no valor de <?= $preco_produto ?> reais adicionado com
+        sucesso</p>
+<?php } else { ?>
+    <p class="alert-danger">Produto não foi adicionado</p>
+<?php } ?>
+<?php include("rodape.php"); ?>
