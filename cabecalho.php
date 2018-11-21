@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/loja.css"/>
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top bg-dark">gi t
+<div class="navbar navbar-inverse navbar-fixed-top bg-dark">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="index.php">Minha Loja</a>
