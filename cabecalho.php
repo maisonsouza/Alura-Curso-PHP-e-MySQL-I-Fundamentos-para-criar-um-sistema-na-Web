@@ -13,9 +13,8 @@
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/loja.css"/>
 </head>
-
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top bg-dark">
+<div class="navbar navbar-inverse navbar-fixed-top bg-dark">gi t
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="index.php">Minha Loja</a>
@@ -23,12 +22,12 @@
         <div>
             <ul class="navbar-nav">
                 <li><a href="produto-formulario.php">Adiciona Produto</a></li>
+                <li><a href="produto-lista.php">Lista produtos</a></li>
                 <li><a href="sobre.php">Sobre</a></li>
             </ul>
         </div>
-
     </div>
 </div>
-    <div class="container">
+<div class="container">
 
-        <div class="principal">
+    <div class="principal">
