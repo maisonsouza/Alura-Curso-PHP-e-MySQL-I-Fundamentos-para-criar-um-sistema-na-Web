@@ -11,10 +11,11 @@ include("cabecalho.php");
 include("conecta.php");
 include ("banco-produto.php");
 
-$nome_produto = $_GET["nome_produto"];
-$preco_produto = $_GET["preco_produto"];
+$nome_produto = $_POST["nome_produto"];
+$preco_produto = $_POST["preco_produto"];
+$descricao = $_POST["descricao"];
 
-if (insereProduto($conexao, $nome_produto, $preco_produto)) { ?>
+if (insereProduto($conexao, $nome_produto, $preco_produto, $descricao)) { ?>
     <p class="text-success">Produto <?= $nome_produto ?> no valor de <?= $preco_produto ?> reais adicionado com
         sucesso</p>
 <?php } else { ?>

@@ -5,24 +5,28 @@
  * Date: 18/11/2018
  * Time: 20:23
  */
-include ("cabecalho.php"); ?>
+include("cabecalho.php"); ?>
 
-<h1> Formulário de cadastro </h1>
+    <h1> Formulário de cadastro </h1>
 
-<form action="adiciona-produto.php">
-    <table class="table">
-        <tr>
-            <td>Produto:</td>
-            <td><input name="nome_produto" class="form-control"></td>
-        </tr>
-        <tr>
-            <td>Preço:</td>
-            <td><input type="number" name="preco_produto" class="form-control"></td>
-        </tr>
-        <tr>
-            <td><input class="btn btn-primary" type="submit" value="Cadastrar"/></td>
-        </tr>
-    </table>
-</form>
+    <form action="adiciona-produto.php" method="post">
+        <table class="table">
+            <tr>
+                <td>Produto:</td>
+                <td><input name="nome_produto" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Preço:</td>
+                <td><input type="number" name="preco_produto" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Descrição:</td>
+                <td><textarea name="descricao" class="form-control"></textarea></td>
+            </tr>
+            <tr>
+                <td><input class="btn btn-primary" type="submit" value="Cadastrar"/></td>
+            </tr>
+        </table>
+    </form>
 
-<?php include ("rodape.php"); ?>
+<?php include("rodape.php"); ?>

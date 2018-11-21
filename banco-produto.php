@@ -15,15 +15,15 @@ function listaProdutos($conexao){
     return $produtos;
 }
 
-function insereProduto($conexao, $nome_produto, $preco_produto)
+function insereProduto($conexao, $nome_produto, $preco_produto,$descricao)
 {
-    $query = "insert into produtos (nome,preco) values ('{$nome_produto}',{$preco_produto})";
+    $query = "insert into produtos (nome,preco,descricao) values ('{$nome_produto}',{$preco_produto},'{$descricao}')";
     $resultadoDaInsercao = mysqli_query($conexao, $query);
     return $resultadoDaInsercao;
 }
 
 function removeProduto($conexao,$id){
     $query = "delete from produtos where id={$id}";
-    $resultadoDaInsercao = mysqli_query($conexao, $query);
-    return $resultadoDaInsercao;
+    $resultadoDaRemocao = mysqli_query($conexao, $query);
+    return $resultadoDaRemocao ;
 }
