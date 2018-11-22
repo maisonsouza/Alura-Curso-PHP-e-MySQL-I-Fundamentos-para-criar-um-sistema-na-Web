@@ -14,8 +14,14 @@ $nome_produto = $_POST['nome_produto'];
 $preco_produto = $_POST['preco_produto'];
 $descricao = $_POST['descricao'];
 $categoria_id = $_POST['categoria_id'];
+if (array_key_exists('usado',$_POST)){
+    $usado = "true";
+}else{
+    $usado = "false";
+}
 
-if (insereProduto($conexao, $nome_produto, $preco_produto, $descricao, $categoria_id)) { ?>
+
+if (insereProduto($conexao, $nome_produto, $preco_produto, $descricao, $categoria_id,$usado)) { ?>
     <p class="text-success">Produto <?= $nome_produto ?> no valor de <?= $preco_produto ?> reais adicionado com
         sucesso</p>
 <?php } else { ?>
