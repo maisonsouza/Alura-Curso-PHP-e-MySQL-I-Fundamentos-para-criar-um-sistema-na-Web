@@ -16,9 +16,9 @@ function listaProdutos($conexao)
     return $produtos;
 }
 
-function insereProduto($conexao, $nome_produto, $preco_produto, $descricao, $categoria_id)
+function insereProduto($conexao, $nome_produto, $preco_produto, $descricao, $categoria_id, $usado)
 {
-    $query = "insert into produtos (nome,preco,descricao,categoria_id) values ('{$nome_produto}',{$preco_produto},'{$descricao}',{$categoria_id})";
+    $query = "insert into produtos (nome,preco,descricao,categoria_id,usado) values ('{$nome_produto}',{$preco_produto},'{$descricao}',{$categoria_id},{$usado})";
     $resultadoDaInsercao = mysqli_query($conexao, $query);
     return $resultadoDaInsercao;
 }
@@ -28,4 +28,18 @@ function removeProduto($conexao, $id)
     $query = "delete from produtos where id={$id}";
     $resultadoDaRemocao = mysqli_query($conexao, $query);
     return $resultadoDaRemocao;
+}
+
+function buscaProduto($conexao, $id)
+{
+    $query = "select * from produtos where id={$id}";
+    $resultadoDaBusca = mysqli_query($conexao, $query);
+    return mysqli_fetch_assoc($resultadoDaBusca);
+}
+
+function alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usado)
+{
+    $query = "update produtos set nome='{$nome}', preco={$preco}, descricao='{$descricao}', categoria_id={$categoria_id}, usado={$usado} where id = '{$id}' ";
+    $resultadoDaAlteracao = mysqli_query($conexao, $query);
+    return $resultadoDaAlteracao;
 }
