@@ -5,11 +5,12 @@
  * Date: 21/11/2018
  * Time: 12:06
  */
-function listaProdutos($conexao){
+function listaProdutos($conexao)
+{
     $produtos = array();
-    $resultado = mysqli_query($conexao,"select * from produtos");
-    while($produto = mysqli_fetch_assoc($resultado)){
-        array_push($produtos,$produto);
+    $resultado = mysqli_query($conexao, "select * from produtos");
+    while ($produto = mysqli_fetch_assoc($resultado)) {
+        array_push($produtos, $produto);
     }
 
     return $produtos;
@@ -22,7 +23,8 @@ function insereProduto($conexao, $nome_produto, $preco_produto)
     return $resultadoDaInsercao;
 }
 
-function removeProduto($conexao,$id){
+function removeProduto($conexao, $id)
+{
     $query = "delete from produtos where id={$id}";
     $resultadoDaInsercao = mysqli_query($conexao, $query);
     return $resultadoDaInsercao;
